@@ -1,0 +1,82 @@
+#top
+  h1 TetromiGo
+  p
+    input(
+      type="button"
+      value="2 Player Mode"
+    )#mode0
+    input(
+      type="button"
+      value="Computer Mode"
+    )#mode1
+  h2 Rules
+  ul
+    li 12 rounds match.
+    li Take turns expanding own country's territory.
+    li Advance 4 troops at once.
+    li The formation is decided by the king.
+    li No enclaves allowed.
+    li Avoid having exactly 13 territories..!
+    li spin = [Shift], ok = [Enter], skip = [ESC]
+#container
+  table#map
+  #ctrl
+    input(
+      type="button"
+      value="←"
+    )#ml
+    input(
+      type="button"
+      value="→"
+    )#mr
+    input(
+      type="button"
+      value="↑"
+    )#mu
+    input(
+      type="button"
+      value="↓"
+    )#md
+    input(
+      type="button"
+      value="spin"
+    )#tr
+    input(
+      type="button"
+      value="ok"
+    )#ok
+    input(
+      type="button"
+      value="skip"
+    )#pass
+  table#info
+    tr
+      th Turn
+      th(colspan=2) Next formation
+    tr
+      td
+        span.turn
+      td
+        table.p0
+      td 
+        table.p1
+  ul
+    li 12 rounds match.
+    li Take turns expanding own country's territory.
+    li Advance 4 troops at once.
+    li The formation is decided by the king.
+    li No enclaves allowed.
+    li Avoid having exactly 13 territories..!
+    li spin = [Shift], ok = [Enter], skip = [ESC]
+  pre#debug
+#thinking Thinking...
+#result
+  .human
+  .demon
+  h2 
+  h3
+    span.scr0
+    =' - '
+    span.scr1
+  p 
+    a(href="#" onclick="start()") Return to start
